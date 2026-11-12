@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Classroom Clock – Big Digital, Analogue &amp; Flip Clock</title>
+<meta name="description" content="Free big classroom clock for the board: digital, analogue, both side by side, or a flip clock – with the date, 12 or 24-hour time and seconds. Full screen.">
+<link rel="canonical" href="https://classroomtimer.co.uk/clock/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0F5257">
+<link rel="icon" href="/favicon.svg?v=20261110" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png?v=20261110" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20261110">
+<meta property="og:type" content="website"><meta property="og:url" content="https://classroomtimer.co.uk/clock/"><meta property="og:site_name" content="Classroom Timer">
+<meta property="og:title" content="Classroom Clock – Big Digital, Analogue &amp; Flip Clock"><meta property="og:description" content="Free big classroom clock for the board: digital, analogue, both side by side, or a flip clock – with the date, 12 or 24-hour time and seconds. Full screen.">
+<meta property="og:image" content="https://classroomtimer.co.uk/og-image.png?v=20261110"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Classroom Clock – Big Digital, Analogue &amp; Flip Clock"><meta name="twitter:description" content="Free big classroom clock for the board: digital, analogue, both side by side, or a flip clock – with the date, 12 or 24-hour time and seconds. Full screen."><meta name="twitter:image" content="https://classroomtimer.co.uk/og-image.png?v=20261110">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site.css?v=20261110">
+<style>.ck .stage{min-height:420px}
+  .ck .row{display:flex;gap:6%;align-items:center;justify-content:center;width:100%;flex-wrap:wrap}
+  #cFace{width:min(360px,78vw);height:auto}.cnums text{font-family:Lexend,sans-serif;font-weight:700;font-size:15px;fill:#14323a}
+  .cklab{margin:4px 0 6px;text-align:center;font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+  #cFaces button{font-size:.9rem}
+  .cnums.trad text{font-family:Georgia,'Times New Roman',serif;font-size:19px;fill:#111}
+  .cnums.roman text{font-family:Georgia,'Times New Roman',serif;font-size:13px;font-weight:400;fill:#2b2418;letter-spacing:-.5px}
+  .cnums.station text{font-family:Arial,Helvetica,sans-serif;font-size:12px;fill:#111}
+  .cnums.colour text{font-size:13px;fill:#fff}.cnums.colour .mins text{font-size:7.5px;fill:#fff;font-weight:800}
+  .cnums.dark text{fill:#f2f2f2}
+  #cDigital{font-size:clamp(3.4rem,13vw,7.5rem);font-weight:800;font-variant-numeric:tabular-nums;line-height:1;letter-spacing:-.02em}
+  #cDigital small{font-size:.45em;color:var(--muted)}#cDigital em{font-style:normal;font-size:.32em;color:var(--brand2);margin-left:.2em}
+  #cDate{font-weight:600;color:var(--muted);font-size:1.15rem;text-align:center}
+  .ck .stage[data-mode=digital] #cFace{display:none}.ck .stage[data-mode=analogue] #cDigital{display:none}
+  #cFlip{display:none;align-items:center;gap:10px}
+  .ck .stage[data-mode=flip] #cFace,.ck .stage[data-mode=flip] #cDigital{display:none}.ck .stage[data-mode=flip] #cFlip{display:flex}
+  .ck .stage[data-mode=flip]{background:#1d2328}.ck .stage[data-mode=flip] #cDate{color:#c9d3d6}
+  .fd{position:relative;display:block;width:clamp(56px,11vw,120px);height:clamp(84px,16vw,176px);border-radius:12px;perspective:600px;
+    color:#f4f1e8;font-weight:800;font-size:clamp(3.4rem,11vw,8rem);box-shadow:0 8px 18px rgba(0,0,0,.45)}
+  .fd .h{position:absolute;left:0;right:0;height:50%;overflow:hidden;backface-visibility:hidden}
+  .fd .h b{position:absolute;left:0;right:0;height:200%;display:grid;place-items:center;font-variant-numeric:tabular-nums;line-height:1}
+  .fd .up,.fd .fu{top:0;border-radius:12px 12px 0 0;background:linear-gradient(#323b40,#272e33);transform-origin:50% 100%}
+  .fd .dn,.fd .fb{bottom:0;border-radius:0 0 12px 12px;background:linear-gradient(#22292d,#1b2125);transform-origin:50% 0}
+  .fd .up b,.fd .fu b{top:0}.fd .dn b,.fd .fb b{top:-100%}
+  .fd .up,.fd .fu{border-bottom:1px solid #0c1012}.fd .dn,.fd .fb{border-top:1px solid #0c1012}
+  .fd .fu,.fd .fb{display:none;z-index:2}
+  .fd.flip .fu{display:block;animation:flapTop .26s ease-in forwards}
+  .fd.flip .fb{display:block;transform:rotateX(90deg);animation:flapBot .26s .26s ease-out forwards}
+  .fd.flip .dn{filter:brightness(.75)}
+  @keyframes flapTop{from{transform:rotateX(0);filter:brightness(1)}to{transform:rotateX(-90deg);filter:brightness(.55)}}
+  @keyframes flapBot{from{transform:rotateX(90deg);filter:brightness(1.4)}to{transform:rotateX(0);filter:brightness(1)}}
+  .fd::after{content:"";position:absolute;left:0;right:0;top:calc(50% - 1px);height:2px;z-index:3;background:#0c1012;pointer-events:none}
+  #cFlip .sep{font-style:normal;color:#f4f1e8;font-size:clamp(2.4rem,8vw,6rem);font-weight:800;margin:0 2px}
+  #cFlip em{font-style:normal;color:#ffc845;font-weight:800;font-size:clamp(1rem,3vw,2rem);margin-left:8px;align-self:flex-end;padding-bottom:12px}
+  .stage:fullscreen .fd,.stage.fake-fs .fd{width:min(13vw,24vh);height:min(19.5vw,36vh);font-size:min(14vw,27vh)}
+  .stage:fullscreen #cFlip .sep,.stage.fake-fs #cFlip .sep{font-size:min(9vw,18vh)}
+  .stage:fullscreen .row,.stage.fake-fs .row{flex-wrap:nowrap}
+  .stage:fullscreen #cFace,.stage.fake-fs #cFace{width:min(72vh,44vw)}
+  .stage:fullscreen[data-mode=both] #cDigital,.stage.fake-fs[data-mode=both] #cDigital{font-size:min(17vh,8.5vw)}
+  @media (max-aspect-ratio:1/1){ .stage:fullscreen .row,.stage.fake-fs .row{flex-wrap:wrap} .stage:fullscreen #cFace,.stage.fake-fs #cFace{width:min(50vh,80vw)} }
+  .stage:fullscreen[data-mode=analogue] #cFace,.stage.fake-fs[data-mode=analogue] #cFace{width:min(86vh,86vw)}
+  .stage:fullscreen #cDigital,.stage.fake-fs #cDigital{font-size:clamp(5rem,20vh,16rem)}
+  .stage:fullscreen[data-mode=digital] #cDigital,.stage.fake-fs[data-mode=digital] #cDigital{font-size:clamp(6rem,30vh,26rem)}
+  .stage:fullscreen #cDate,.stage.fake-fs #cDate{font-size:clamp(1.4rem,4vh,2.6rem)}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Classroom clock", "url": "https://classroomtimer.co.uk/clock/", "applicationCategory": "EducationalApplication", "operatingSystem": "Any (runs in your web browser)", "isAccessibleForFree": true, "inLanguage": "en-GB", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "GBP"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does the clock show the right time?", "acceptedAnswer": {"@type": "Answer", "text": "It shows the time set on your computer or tablet, which is normally kept accurate automatically."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Classroom Timer", "item": "https://classroomtimer.co.uk/"}, {"@type": "ListItem", "position": 2, "name": "Classroom clock", "item": "https://classroomtimer.co.uk/clock/"}]}]}</script>
+</head>
+<body data-page="clock">
+<header class="top"><div class="top-in">
+  <a class="logo" href="/" aria-label="Classroom Timer – home"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="35" r="24" fill="#FFC845"/><circle cx="32" cy="35" r="18" fill="#fff"/>
+<path d="M32 35 L32 22" stroke="#0F5257" stroke-width="5" stroke-linecap="round"/><path d="M32 35 L41 40" stroke="#FF6B5B" stroke-width="5" stroke-linecap="round"/>
+<rect x="26" y="4" width="12" height="7" rx="3" fill="#FFC845"/><circle cx="32" cy="35" r="3.5" fill="#0F5257"/></svg>Classroom <span>Timer</span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">☰ Menu</button>
+  <nav class="nav" id="nav" aria-label="Timers"><a href="/">Timer</a><a href="/fun-timers/">Fun</a><a href="/races/">Races</a><a href="/holiday-countdown/">Countdowns</a><a href="/stopwatch/">Stopwatch</a><a href="/interval-timer/">Interval</a><a href="/exam-timer/">Exam</a><a href="/pomodoro-timer/">Pomodoro</a><a href="/multiple-timers/">Multiple</a><a href="/clock/" class="on" aria-current="page">Clock</a><a href="/fundraising-thermometer/">Fundraiser</a></nav>
+</div></header>
+<main>
+<div class="hero"><h1>Classroom clock</h1><p>A big digital, analogue or flip clock with the date – handy at the front of the room and for teaching children to tell the time.</p></div>
+<section class="card ck"><div class="chips" id="cModes"><button type="button" data-m="both">🕒 Both</button><button type="button" data-m="analogue">⏰ Analogue</button><button type="button" data-m="digital">🔢 Digital</button><button type="button" data-m="flip">🗂️ Flip clock</button></div>
+    <div id="cFaceRow"><p class="cklab">Clock face</p><div class="chips" id="cFaces"></div></div>
+    <div class="stage" id="stage"><button class="fs-btn" id="fsBtn" type="button"></button><div class="row"><svg id="cFace" viewBox="0 0 200 200" role="img" aria-label="Analogue clock"></svg><div id="cDigital"></div><div id="cFlip"></div></div><div id="cDate"></div></div>
+    <div class="opts"><label><input type="checkbox" id="cH24"> 24-hour</label><label><input type="checkbox" id="cSecs"> Seconds</label><label><input type="checkbox" id="cDateOn"> Date</label><label><input type="checkbox" id="cNumsOn"> Numbers on the clock face</label></div>
+    <p class="hint">F = full screen.</p></section>
+</main>
+<section class="info"><h2>Teaching the time</h2>
+  <p>Show the analogue and digital clocks side by side so children can match the two. Turn off the numbers on the clock face for a challenge, or switch to 24-hour time when you teach timetables.</p>
+  <h2>More timers</h2><div class="tools"><a class="tool" href="/"><i>⏱️</i><b>Classroom timer</b><span>Big countdown with presets for the board.</span></a><a class="tool" href="/fun-timers/"><i>🐢</i><b>Fun timers</b><span>Animal race, sand timer, traffic light and candle.</span></a><a class="tool" href="/races/"><i>🦆</i><b>Emoji & duck races</b><span>Random-winner races to pick a name or team.</span></a><a class="tool" href="/holiday-countdown/"><i>🎄</i><b>Holiday countdowns</b><span>Days and sleeps until Christmas, Easter and your own dates.</span></a><a class="tool" href="/fundraising-thermometer/"><i>🌡️</i><b>Fundraising thermometer</b><span>Show your total rising – with a cash counter.</span></a><a class="tool" href="/stopwatch/"><i>⏲️</i><b>Stopwatch</b><span>Count up with laps – great for PE and science.</span></a><a class="tool" href="/interval-timer/"><i>💪</i><b>Interval timer</b><span>Work and rest rounds for PE, HIIT and circuits.</span></a><a class="tool" href="/exam-timer/"><i>📝</i><b>Exam timer</b><span>Reading time, extra time and 30/15/5 minute warnings.</span></a><a class="tool" href="/pomodoro-timer/"><i>🍅</i><b>Pomodoro timer</b><span>Focus sessions with planned breaks.</span></a><a class="tool" href="/multiple-timers/"><i>🔢</i><b>Multiple timers</b><span>A separate countdown for every group.</span></a></div><h2>Questions</h2><details><summary>Does the clock show the right time?</summary><p>It shows the time set on your computer or tablet, which is normally kept accurate automatically.</p></details></section>
+<footer><div class="foot-in">
+  <div class="foot-links"><a href="/">Classroom timer</a> · <a href="/fun-timers/">Fun timers</a> · <a href="/races/">Emoji & duck races</a> · <a href="/holiday-countdown/">Holiday countdowns</a> · <a href="/fundraising-thermometer/">Fundraising thermometer</a> · <a href="/stopwatch/">Stopwatch</a> · <a href="/interval-timer/">Interval timer</a> · <a href="/exam-timer/">Exam timer</a> · <a href="/pomodoro-timer/">Pomodoro timer</a> · <a href="/multiple-timers/">Multiple timers</a> · <a href="/clock/">Classroom clock</a> · <a href="/contact/">Contact</a></div>
+  <div><strong>100% free</strong> – no sign-up, no adverts, nothing to download. Everything runs on your device – apart from the contact form, nothing you type is sent anywhere.</div>
+  <div>© 2026 classroomtimer.co.uk</div>
+</div></footer>
+<script src="/common.js?v=20261110"></script><script src="/pages/clock.js?v=20261110"></script>
+<script data-goatcounter="https://classroomtimer.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

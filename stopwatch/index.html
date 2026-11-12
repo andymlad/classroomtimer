@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Online Stopwatch with Laps – Big Classroom Stopwatch</title>
+<meta name="description" content="Free online stopwatch with lap times and big digits for the board. Ideal for PE, science experiments and classroom challenges. No sign-up.">
+<link rel="canonical" href="https://classroomtimer.co.uk/stopwatch/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0F5257">
+<link rel="icon" href="/favicon.svg?v=20261110" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png?v=20261110" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20261110">
+<meta property="og:type" content="website"><meta property="og:url" content="https://classroomtimer.co.uk/stopwatch/"><meta property="og:site_name" content="Classroom Timer">
+<meta property="og:title" content="Online Stopwatch with Laps – Big Classroom Stopwatch"><meta property="og:description" content="Free online stopwatch with lap times and big digits for the board. Ideal for PE, science experiments and classroom challenges. No sign-up.">
+<meta property="og:image" content="https://classroomtimer.co.uk/og-image.png?v=20261110"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Online Stopwatch with Laps – Big Classroom Stopwatch"><meta name="twitter:description" content="Free online stopwatch with lap times and big digits for the board. Ideal for PE, science experiments and classroom challenges. No sign-up."><meta name="twitter:image" content="https://classroomtimer.co.uk/og-image.png?v=20261110">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site.css?v=20261110">
+<style>.sw .digits{font-size:clamp(3.4rem,14vw,8rem)}.sw .digits small{font-size:.45em;color:var(--muted)}
+  #laps{max-width:560px;margin:16px auto 0}#laps table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+  #laps th,#laps td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:right}#laps th:first-child,#laps td:first-child{text-align:left}
+  #laps td small{font-size:.8em;color:var(--muted)}#laps tr.fast td{color:#138a5b;font-weight:700}#laps tr.slow td{color:#c2412f}
+  .stage:fullscreen .digits,.stage.fake-fs .digits{font-size:clamp(5rem,26vh,20rem)}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Online stopwatch", "url": "https://classroomtimer.co.uk/stopwatch/", "applicationCategory": "EducationalApplication", "operatingSystem": "Any (runs in your web browser)", "isAccessibleForFree": true, "inLanguage": "en-GB", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "GBP"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How accurate is the stopwatch?", "acceptedAnswer": {"@type": "Answer", "text": "It shows hundredths of a second and is based on your device’s clock, so it stays accurate even if you switch tabs."}}, {"@type": "Question", "name": "Can I record lap times?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Press Lap (or the L key) as often as you like. Each lap shows its own time and the running total."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Classroom Timer", "item": "https://classroomtimer.co.uk/"}, {"@type": "ListItem", "position": 2, "name": "Online stopwatch", "item": "https://classroomtimer.co.uk/stopwatch/"}]}]}</script>
+</head>
+<body data-page="stopwatch">
+<header class="top"><div class="top-in">
+  <a class="logo" href="/" aria-label="Classroom Timer – home"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="35" r="24" fill="#FFC845"/><circle cx="32" cy="35" r="18" fill="#fff"/>
+<path d="M32 35 L32 22" stroke="#0F5257" stroke-width="5" stroke-linecap="round"/><path d="M32 35 L41 40" stroke="#FF6B5B" stroke-width="5" stroke-linecap="round"/>
+<rect x="26" y="4" width="12" height="7" rx="3" fill="#FFC845"/><circle cx="32" cy="35" r="3.5" fill="#0F5257"/></svg>Classroom <span>Timer</span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">☰ Menu</button>
+  <nav class="nav" id="nav" aria-label="Timers"><a href="/">Timer</a><a href="/fun-timers/">Fun</a><a href="/races/">Races</a><a href="/holiday-countdown/">Countdowns</a><a href="/stopwatch/" class="on" aria-current="page">Stopwatch</a><a href="/interval-timer/">Interval</a><a href="/exam-timer/">Exam</a><a href="/pomodoro-timer/">Pomodoro</a><a href="/multiple-timers/">Multiple</a><a href="/clock/">Clock</a><a href="/fundraising-thermometer/">Fundraiser</a></nav>
+</div></header>
+<main>
+<div class="hero"><h1>Online stopwatch</h1><p>Count up with big, clear digits and record lap times – ideal for PE, science experiments and quick-fire challenges.</p></div>
+<section class="card sw"><div class="stage" id="stage"><button class="fs-btn" id="fsBtn" type="button"></button><div class="digits" id="swDigits">0:00</div>
+    <div class="fsctrl"><button class="btn go" id="swGo2" type="button">Start</button><button class="btn dark" id="swLap2" type="button">Lap</button><button class="btn ghost" id="swReset2" type="button">Reset</button></div></div>
+    <div class="ctrl"><button class="btn go" id="swGo" type="button">Start</button><button class="btn dark" id="swLap" type="button">Lap</button><button class="btn ghost" id="swReset" type="button">Reset</button></div>
+    <div id="laps"></div><p class="hint">Keyboard: Space start/stop · L lap · R reset · F full screen.</p></section>
+</main>
+<section class="info"><h2>Using the stopwatch in lessons</h2>
+  <p>Press <strong>Start</strong> to begin counting and <strong>Lap</strong> to record a split without stopping – perfect for timing laps of the field, shuttle runs or each stage of an experiment. The fastest lap shows in green and the slowest in red once you have three or more.</p>
+  <h2>More timers</h2><div class="tools"><a class="tool" href="/"><i>⏱️</i><b>Classroom timer</b><span>Big countdown with presets for the board.</span></a><a class="tool" href="/fun-timers/"><i>🐢</i><b>Fun timers</b><span>Animal race, sand timer, traffic light and candle.</span></a><a class="tool" href="/races/"><i>🦆</i><b>Emoji & duck races</b><span>Random-winner races to pick a name or team.</span></a><a class="tool" href="/holiday-countdown/"><i>🎄</i><b>Holiday countdowns</b><span>Days and sleeps until Christmas, Easter and your own dates.</span></a><a class="tool" href="/fundraising-thermometer/"><i>🌡️</i><b>Fundraising thermometer</b><span>Show your total rising – with a cash counter.</span></a><a class="tool" href="/interval-timer/"><i>💪</i><b>Interval timer</b><span>Work and rest rounds for PE, HIIT and circuits.</span></a><a class="tool" href="/exam-timer/"><i>📝</i><b>Exam timer</b><span>Reading time, extra time and 30/15/5 minute warnings.</span></a><a class="tool" href="/pomodoro-timer/"><i>🍅</i><b>Pomodoro timer</b><span>Focus sessions with planned breaks.</span></a><a class="tool" href="/multiple-timers/"><i>🔢</i><b>Multiple timers</b><span>A separate countdown for every group.</span></a><a class="tool" href="/clock/"><i>🕒</i><b>Classroom clock</b><span>Digital, analogue and flip clock for the room.</span></a></div><h2>Questions</h2><details><summary>How accurate is the stopwatch?</summary><p>It shows hundredths of a second and is based on your device’s clock, so it stays accurate even if you switch tabs.</p></details><details><summary>Can I record lap times?</summary><p>Yes. Press Lap (or the L key) as often as you like. Each lap shows its own time and the running total.</p></details></section>
+<footer><div class="foot-in">
+  <div class="foot-links"><a href="/">Classroom timer</a> · <a href="/fun-timers/">Fun timers</a> · <a href="/races/">Emoji & duck races</a> · <a href="/holiday-countdown/">Holiday countdowns</a> · <a href="/fundraising-thermometer/">Fundraising thermometer</a> · <a href="/stopwatch/">Stopwatch</a> · <a href="/interval-timer/">Interval timer</a> · <a href="/exam-timer/">Exam timer</a> · <a href="/pomodoro-timer/">Pomodoro timer</a> · <a href="/multiple-timers/">Multiple timers</a> · <a href="/clock/">Classroom clock</a> · <a href="/contact/">Contact</a></div>
+  <div><strong>100% free</strong> – no sign-up, no adverts, nothing to download. Everything runs on your device – apart from the contact form, nothing you type is sent anywhere.</div>
+  <div>© 2026 classroomtimer.co.uk</div>
+</div></footer>
+<script src="/common.js?v=20261110"></script><script src="/pages/stopwatch.js?v=20261110"></script>
+<script data-goatcounter="https://classroomtimer.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

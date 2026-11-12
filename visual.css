@@ -1,0 +1,64 @@
+  .vis{width:min(340px,80vw);aspect-ratio:1;position:relative;display:grid;place-items:center}
+  .vis > *{grid-area:1/1}
+  .digits{font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-.02em;line-height:1;font-size:clamp(3rem,11vw,5.2rem);color:var(--ink);
+    background:none;border:0;font-family:inherit;cursor:pointer;padding:4px 10px;border-radius:14px}
+  .digits:hover{background:rgba(15,82,87,.06)}
+  .digits.big{font-size:clamp(4.5rem,20vw,11rem)}
+  .lbl{color:var(--muted);font-weight:600;min-height:1.4em;text-align:center}
+  /* ring */
+  .ring{width:100%;height:100%}
+  .ring .track{stroke:#e3eeec}
+  .ring .prog{transition:stroke .4s}
+  /* bar */
+  .bar{width:min(760px,100%);height:64px;border-radius:999px;background:#e3eeec;overflow:hidden}
+  .bar i{display:block;height:100%;width:100%;border-radius:999px;transform-origin:left;transition:background .4s}
+  /* traffic light */
+  .tl{width:44%;height:94%;background:#26343a;border-radius:44px;display:flex;flex-direction:column;justify-content:space-around;align-items:center;padding:14px 0;box-shadow:inset 0 -6px 0 rgba(0,0,0,.25)}
+  .tl b{width:62%;aspect-ratio:1;border-radius:50%;background:#3c4a50;transition:background .3s,box-shadow .3s}
+  .tl b.r.on{background:#ff4d42;box-shadow:0 0 30px 6px rgba(255,77,66,.7)}
+  .tl b.a.on{background:#ffb627;box-shadow:0 0 30px 6px rgba(255,182,39,.7)}
+  .tl b.g.on{background:#27d17f;box-shadow:0 0 30px 6px rgba(39,209,127,.7)}
+  /* candle */
+  .smoke{opacity:0}
+  .out .smoke{animation:smoke 2.4s ease-out forwards}
+  @keyframes smoke{0%{opacity:.7;transform:translateY(0)}100%{opacity:0;transform:translateY(-60px) scale(1.6)}}
+  /* animal race (for 3–6 year olds) */
+  .animals{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:-4px 0 14px}
+  .animals button{border:3px solid var(--line);background:#fff;border-radius:18px;padding:6px 8px;cursor:pointer;width:84px;font:inherit;font-weight:700;font-size:.78rem;color:var(--ink)}
+  .animals button svg{width:62px;height:50px;display:block;margin:0 auto 2px}
+  .animals button.on{border-color:var(--leaf);background:#eefaf3}
+  .race{width:100%;height:auto;display:block;border-radius:18px}
+  .cloud{animation:drift 40s linear infinite}
+  .cloud.c2{animation-duration:58s}
+  @keyframes drift{from{transform:translateX(-160px)}to{transform:translateX(860px)}}
+  .walk .body{animation:bob .5s ease-in-out infinite}
+  @keyframes bob{50%{transform:translateY(-6px) rotate(-3deg)}}
+  .win .body{animation:hop .6s ease-in-out 5}
+  @keyframes hop{50%{transform:translateY(-38px) scale(1.08)}}
+  .bloom circle,.bloom ellipse{transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
+  .bud .petals{transform:scale(.25);transform-box:fill-box;transform-origin:center}
+  .petals{transition:transform .6s cubic-bezier(.3,1.6,.5,1);transform-box:fill-box;transform-origin:center}
+  .confetti{position:absolute;top:-20px;width:10px;height:16px;border-radius:3px;animation:fallc 2.6s ease-in forwards;pointer-events:none}
+  @keyframes fallc{to{transform:translateY(110vh) rotate(720deg)}}
+  .stage.race-on{min-height:0}
+  .stage.race-on .digits{font-size:clamp(2.4rem,7vw,3.6rem)}
+  .stage:fullscreen.race-on .vis,.stage.fake-fs.race-on .vis{width:min(94vw,150vh) !important}
+  .stage:fullscreen .vis,.stage.fake-fs .vis{width:min(60vh,80vw)}
+  .stage:fullscreen .digits.big,.stage.fake-fs .digits.big{font-size:clamp(6rem,32vh,22rem)}
+  .stage:fullscreen .bar,.stage.fake-fs .bar{height:14vh}
+  .edit{display:none;gap:8px;align-items:center;justify-content:center}
+  .edit.on{display:flex}
+  .edit input{width:110px;font:inherit;font-weight:800;font-size:2.4rem;text-align:center;border:2px solid var(--brand2);border-radius:14px;padding:6px}
+  .edit span{font-size:2.4rem;font-weight:800}
+  .edit button{font:inherit;font-weight:700;border:0;background:var(--brand);color:#fff;border-radius:12px;padding:12px 16px;cursor:pointer}
+  .digits.big{font-size:clamp(4.5rem,20vw,11rem)}
+  .animals[hidden]{display:none}
+  .flame{transform-box:fill-box;transform-origin:50% 92%;animation:flick 1.6s ease-in-out infinite}
+  @keyframes flick{0%,100%{transform:scale(1,1) skewX(0deg)}20%{transform:scale(.96,1.05) skewX(-2deg)}45%{transform:scale(1.03,.96) skewX(2deg)}70%{transform:scale(.98,1.07) skewX(-1deg)}}
+  .glow{transform-box:fill-box;transform-origin:center;animation:glowp 2.2s ease-in-out infinite}
+  @keyframes glowp{50%{opacity:.75;transform:scale(.94)}}
+  #wickOut{display:none}
+  .out #flameG{display:none}.out #wickOut{display:inline}
+  @media (prefers-reduced-motion: reduce){ .flame,.glow{animation:none} }
+  .arrowc{width:100%;height:100%}
+  #slice{transition:fill .5s}

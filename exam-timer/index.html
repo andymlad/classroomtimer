@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exam Timer – Reading Time, Extra Time &amp; Warnings | GCSE, A-level</title>
+<meta name="description" content="Free exam timer for schools: shows the time, start and finish, time remaining, reading time, 25% extra time and 30/15/5 minute warnings. Full screen.">
+<link rel="canonical" href="https://classroomtimer.co.uk/exam-timer/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0F5257">
+<link rel="icon" href="/favicon.svg?v=20261110" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png?v=20261110" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20261110">
+<meta property="og:type" content="website"><meta property="og:url" content="https://classroomtimer.co.uk/exam-timer/"><meta property="og:site_name" content="Classroom Timer">
+<meta property="og:title" content="Exam Timer – Reading Time, Extra Time &amp; Warnings | GCSE, A-level"><meta property="og:description" content="Free exam timer for schools: shows the time, start and finish, time remaining, reading time, 25% extra time and 30/15/5 minute warnings. Full screen.">
+<meta property="og:image" content="https://classroomtimer.co.uk/og-image.png?v=20261110"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Exam Timer – Reading Time, Extra Time &amp; Warnings | GCSE, A-level"><meta name="twitter:description" content="Free exam timer for schools: shows the time, start and finish, time remaining, reading time, 25% extra time and 30/15/5 minute warnings. Full screen."><meta name="twitter:image" content="https://classroomtimer.co.uk/og-image.png?v=20261110">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site.css?v=20261110">
+<style>.ex .stage{min-height:420px;gap:6px}
+  #eTitle{font-size:clamp(1.4rem,4vw,2.2rem);font-weight:800;margin:0;text-align:center}
+  #eNow{font-size:clamp(1.2rem,3.4vw,1.8rem);font-weight:700;color:var(--brand2);font-variant-numeric:tabular-nums}
+  #eStatus{font-weight:700;color:var(--muted);font-size:1.1rem}
+  #eDigits{font-size:clamp(3.6rem,15vw,8.5rem)}
+  #eTimes,#eExtraLine{color:var(--ink);font-weight:600;text-align:center}#eExtraLine{color:#6a4fc9}
+  #eBanner{min-height:1.6em;font-weight:800;color:#c2412f;font-size:1.2rem;text-align:center}
+  .ex .stage[data-phase=reading]{background:#fff4d6}.ex .stage[data-phase=extra]{background:#efe9ff}.ex .stage[data-phase=finished]{background:#ffe9e4}.ex .stage[data-phase=paused]{background:#eef0f2}
+  .stage:fullscreen #eDigits,.stage.fake-fs #eDigits{font-size:clamp(6rem,24vh,18rem)}
+  .stage:fullscreen #eTitle,.stage.fake-fs #eTitle{font-size:clamp(2rem,6vh,4rem)}
+  .stage:fullscreen #eNow,.stage.fake-fs #eNow{font-size:clamp(1.8rem,5vh,3.4rem)}
+  .stage:fullscreen #eTimes,.stage:fullscreen #eExtraLine,.stage:fullscreen #eBanner,.stage.fake-fs #eTimes,.stage.fake-fs #eExtraLine,.stage.fake-fs #eBanner{font-size:clamp(1.2rem,3.4vh,2.2rem)}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Exam timer", "url": "https://classroomtimer.co.uk/exam-timer/", "applicationCategory": "EducationalApplication", "operatingSystem": "Any (runs in your web browser)", "isAccessibleForFree": true, "inLanguage": "en-GB", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "GBP"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does the exam timer show the time of day?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The current time is always shown, along with when the exam started and when it finishes."}}, {"@type": "Question", "name": "How does extra time work?", "acceptedAnswer": {"@type": "Answer", "text": "Choose 10%, 25% or 50%. When standard time ends the screen says so, and a second countdown continues for candidates with extra time until their finishing time."}}, {"@type": "Question", "name": "Is this an official JCQ tool?", "acceptedAnswer": {"@type": "Answer", "text": "No. It’s a free, independent timer to help invigilators and teachers. Always follow the exam board’s and JCQ’s instructions and the times printed on the paper."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Classroom Timer", "item": "https://classroomtimer.co.uk/"}, {"@type": "ListItem", "position": 2, "name": "Exam timer", "item": "https://classroomtimer.co.uk/exam-timer/"}]}]}</script>
+</head>
+<body data-page="exam">
+<header class="top"><div class="top-in">
+  <a class="logo" href="/" aria-label="Classroom Timer – home"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="35" r="24" fill="#FFC845"/><circle cx="32" cy="35" r="18" fill="#fff"/>
+<path d="M32 35 L32 22" stroke="#0F5257" stroke-width="5" stroke-linecap="round"/><path d="M32 35 L41 40" stroke="#FF6B5B" stroke-width="5" stroke-linecap="round"/>
+<rect x="26" y="4" width="12" height="7" rx="3" fill="#FFC845"/><circle cx="32" cy="35" r="3.5" fill="#0F5257"/></svg>Classroom <span>Timer</span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">☰ Menu</button>
+  <nav class="nav" id="nav" aria-label="Timers"><a href="/">Timer</a><a href="/fun-timers/">Fun</a><a href="/races/">Races</a><a href="/holiday-countdown/">Countdowns</a><a href="/stopwatch/">Stopwatch</a><a href="/interval-timer/">Interval</a><a href="/exam-timer/" class="on" aria-current="page">Exam</a><a href="/pomodoro-timer/">Pomodoro</a><a href="/multiple-timers/">Multiple</a><a href="/clock/">Clock</a><a href="/fundraising-thermometer/">Fundraiser</a></nav>
+</div></header>
+<main>
+<div class="hero"><h1>Exam timer</h1><p>Shows the current time, when the exam started and finishes, and the time remaining – with optional reading time, extra time and warnings at 30, 15 and 5 minutes.</p></div>
+<section class="card ex"><div class="stage" id="stage"><button class="fs-btn" id="fsBtn" type="button"></button><p id="eTitle">Exam</p><div id="eNow">--:--</div><div id="eStatus"></div>
+    <div class="digits" id="eDigits">1:30:00</div><div id="eTimes"></div><div id="eExtraLine"></div><div id="eBanner" aria-live="polite"></div>
+    <div class="fsctrl"><button class="btn go" id="eGo2" type="button">Start exam</button><button class="btn ghost" id="eStop2" type="button">Reset</button></div></div>
+    <div class="presets" id="ePresets"><button type="button" data-m="30"><b>30 min</b><small>Short test</small></button><button type="button" data-m="45"><b>45 min</b><small>Mock / test</small></button><button type="button" data-m="60"><b>1 hr</b><small>Exam</small></button><button type="button" data-m="75"><b>1 hr 15</b><small>Exam</small></button><button type="button" data-m="90"><b>1 hr 30</b><small>Exam</small></button><button type="button" data-m="105"><b>1 hr 45</b><small>Exam</small></button><button type="button" data-m="120"><b>2 hr</b><small>Exam</small></button><button type="button" data-m="135"><b>2 hr 15</b><small>Exam</small></button><button type="button" data-m="150"><b>2 hr 30</b><small>Exam</small></button></div>
+    <div class="grid-fields" id="eFields">
+      <label class="field" style="grid-column:1/-1">Exam name (optional)<input type="text" id="eName" maxlength="60" placeholder="e.g. GCSE Maths Paper 1 (mock)"></label>
+      <label class="field">Hours<input type="number" id="eH" min="0" max="6"></label>
+      <label class="field">Minutes<input type="number" id="eM" min="0" max="59"></label>
+      <label class="field">Reading time (minutes)<input type="number" id="eRead" min="0" max="60"></label>
+      <label class="field">Extra time<select id="eExtra"><option value="0">None</option><option value="10">10%</option><option value="25">25%</option><option value="50">50%</option></select></label>
+      <label class="field">Sound at the end<select id="eSound"></select></label></div>
+    <div class="opts"><label><input type="checkbox" id="eWarn"> Warnings at 30, 15 and 5 minutes</label></div>
+    <div class="ctrl"><button class="btn go" id="eGo" type="button">Start exam</button><button class="btn ghost" id="eStop" type="button">Reset</button></div>
+    <p class="hint">Always check the front of the paper for the exact time allowed. F = full screen.</p></section>
+</main>
+<section class="info"><h2>Running an exam or mock</h2>
+  <ol><li>Type the exam name and set the time allowed (or pick a preset).</li>
+  <li>Add <strong>reading time</strong> if candidates may read the paper before writing – the screen says “do not write yet” and changes automatically when writing time starts.</li>
+  <li>If some candidates have <strong>extra time</strong> (for example 25% as an access arrangement), choose it: the screen shows both finishing times, so one timer works for the whole room.</li>
+  <li>Press <strong>Start exam</strong> and go full screen. Warnings appear at 30, 15 and 5 minutes remaining.</li></ol>
+  <p>If you need to pause – for example for a fire alarm – press Pause, and all the finishing times move on by the length of the pause.</p>
+  <h2>More timers</h2><div class="tools"><a class="tool" href="/"><i>⏱️</i><b>Classroom timer</b><span>Big countdown with presets for the board.</span></a><a class="tool" href="/fun-timers/"><i>🐢</i><b>Fun timers</b><span>Animal race, sand timer, traffic light and candle.</span></a><a class="tool" href="/races/"><i>🦆</i><b>Emoji & duck races</b><span>Random-winner races to pick a name or team.</span></a><a class="tool" href="/holiday-countdown/"><i>🎄</i><b>Holiday countdowns</b><span>Days and sleeps until Christmas, Easter and your own dates.</span></a><a class="tool" href="/fundraising-thermometer/"><i>🌡️</i><b>Fundraising thermometer</b><span>Show your total rising – with a cash counter.</span></a><a class="tool" href="/stopwatch/"><i>⏲️</i><b>Stopwatch</b><span>Count up with laps – great for PE and science.</span></a><a class="tool" href="/interval-timer/"><i>💪</i><b>Interval timer</b><span>Work and rest rounds for PE, HIIT and circuits.</span></a><a class="tool" href="/pomodoro-timer/"><i>🍅</i><b>Pomodoro timer</b><span>Focus sessions with planned breaks.</span></a><a class="tool" href="/multiple-timers/"><i>🔢</i><b>Multiple timers</b><span>A separate countdown for every group.</span></a><a class="tool" href="/clock/"><i>🕒</i><b>Classroom clock</b><span>Digital, analogue and flip clock for the room.</span></a></div><h2>Questions</h2><details><summary>Does the exam timer show the time of day?</summary><p>Yes. The current time is always shown, along with when the exam started and when it finishes.</p></details><details><summary>How does extra time work?</summary><p>Choose 10%, 25% or 50%. When standard time ends the screen says so, and a second countdown continues for candidates with extra time until their finishing time.</p></details><details><summary>Is this an official JCQ tool?</summary><p>No. It’s a free, independent timer to help invigilators and teachers. Always follow the exam board’s and JCQ’s instructions and the times printed on the paper.</p></details></section>
+<footer><div class="foot-in">
+  <div class="foot-links"><a href="/">Classroom timer</a> · <a href="/fun-timers/">Fun timers</a> · <a href="/races/">Emoji & duck races</a> · <a href="/holiday-countdown/">Holiday countdowns</a> · <a href="/fundraising-thermometer/">Fundraising thermometer</a> · <a href="/stopwatch/">Stopwatch</a> · <a href="/interval-timer/">Interval timer</a> · <a href="/exam-timer/">Exam timer</a> · <a href="/pomodoro-timer/">Pomodoro timer</a> · <a href="/multiple-timers/">Multiple timers</a> · <a href="/clock/">Classroom clock</a> · <a href="/contact/">Contact</a></div>
+  <div><strong>100% free</strong> – no sign-up, no adverts, nothing to download. Everything runs on your device – apart from the contact form, nothing you type is sent anywhere.</div>
+  <div>© 2026 classroomtimer.co.uk</div>
+</div></footer>
+<script src="/common.js?v=20261110"></script><script src="/pages/exam.js?v=20261110"></script>
+<script data-goatcounter="https://classroomtimer.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

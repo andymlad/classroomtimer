@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pomodoro Timer – Free Focus Timer for Study and Revision</title>
+<meta name="description" content="Free Pomodoro timer for revision and homework: 25-minute focus sessions with short and long breaks, automatic switching and gentle sounds.">
+<link rel="canonical" href="https://classroomtimer.co.uk/pomodoro-timer/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0F5257">
+<link rel="icon" href="/favicon.svg?v=20261110" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png?v=20261110" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20261110">
+<meta property="og:type" content="website"><meta property="og:url" content="https://classroomtimer.co.uk/pomodoro-timer/"><meta property="og:site_name" content="Classroom Timer">
+<meta property="og:title" content="Pomodoro Timer – Free Focus Timer for Study and Revision"><meta property="og:description" content="Free Pomodoro timer for revision and homework: 25-minute focus sessions with short and long breaks, automatic switching and gentle sounds.">
+<meta property="og:image" content="https://classroomtimer.co.uk/og-image.png?v=20261110"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Pomodoro Timer – Free Focus Timer for Study and Revision"><meta name="twitter:description" content="Free Pomodoro timer for revision and homework: 25-minute focus sessions with short and long breaks, automatic switching and gentle sounds."><meta name="twitter:image" content="https://classroomtimer.co.uk/og-image.png?v=20261110">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site.css?v=20261110">
+<style>.pm .vis{width:min(320px,76vw);aspect-ratio:1;display:grid;place-items:center}.pm .vis>*{grid-area:1/1}
+  .pm .ring{width:100%;height:100%}.pm .ring .track{stroke:#eef1f0}
+  #pPhase{font-size:1.4rem;font-weight:800;margin:0}.pm .stage[data-phase=focus] #pPhase{color:#d9473a}.pm .stage[data-phase=short] #pPhase{color:#138a5b}.pm .stage[data-phase=long] #pPhase{color:var(--brand2)}
+  #pDots{display:flex;gap:8px;align-items:center;color:var(--muted);font-weight:600}#pDots i{width:18px;height:18px;border-radius:50%;background:#e6ecea;display:inline-block}#pDots i.on{background:var(--coral)}#pDots span{margin-left:6px}
+  .stage:fullscreen .vis,.stage.fake-fs .vis{width:min(62vh,80vw)}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Pomodoro timer for study", "url": "https://classroomtimer.co.uk/pomodoro-timer/", "applicationCategory": "EducationalApplication", "operatingSystem": "Any (runs in your web browser)", "isAccessibleForFree": true, "inLanguage": "en-GB", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "GBP"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I change the focus and break lengths?", "acceptedAnswer": {"@type": "Answer", "text": "Yes – set any focus, short break and long break length, and how many sessions come before a long break. Your settings are remembered on your device."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Classroom Timer", "item": "https://classroomtimer.co.uk/"}, {"@type": "ListItem", "position": 2, "name": "Pomodoro timer for study", "item": "https://classroomtimer.co.uk/pomodoro-timer/"}]}]}</script>
+</head>
+<body data-page="pomodoro">
+<header class="top"><div class="top-in">
+  <a class="logo" href="/" aria-label="Classroom Timer – home"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="35" r="24" fill="#FFC845"/><circle cx="32" cy="35" r="18" fill="#fff"/>
+<path d="M32 35 L32 22" stroke="#0F5257" stroke-width="5" stroke-linecap="round"/><path d="M32 35 L41 40" stroke="#FF6B5B" stroke-width="5" stroke-linecap="round"/>
+<rect x="26" y="4" width="12" height="7" rx="3" fill="#FFC845"/><circle cx="32" cy="35" r="3.5" fill="#0F5257"/></svg>Classroom <span>Timer</span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">☰ Menu</button>
+  <nav class="nav" id="nav" aria-label="Timers"><a href="/">Timer</a><a href="/fun-timers/">Fun</a><a href="/races/">Races</a><a href="/holiday-countdown/">Countdowns</a><a href="/stopwatch/">Stopwatch</a><a href="/interval-timer/">Interval</a><a href="/exam-timer/">Exam</a><a href="/pomodoro-timer/" class="on" aria-current="page">Pomodoro</a><a href="/multiple-timers/">Multiple</a><a href="/clock/">Clock</a><a href="/fundraising-thermometer/">Fundraiser</a></nav>
+</div></header>
+<main>
+<div class="hero"><h1>Pomodoro timer for study</h1><p>Work in focused bursts with planned breaks – 25 minutes of focus, a 5-minute break, and a longer break after every four sessions. Change the times to suit your class.</p></div>
+<section class="card pm"><div class="chips" id="pModes"><button type="button" data-m="focus">🍅 Focus</button><button type="button" data-m="short">☕ Short break</button><button type="button" data-m="long">🌿 Long break</button></div>
+    <div class="stage" id="stage"><button class="fs-btn" id="fsBtn" type="button"></button><p id="pPhase">Focus time</p>
+    <div class="vis"><svg class="ring" viewBox="0 0 200 200"><circle class="track" cx="100" cy="100" r="86" fill="none" stroke-width="18"/><circle id="pProg" cx="100" cy="100" r="86" fill="none" stroke-width="18" stroke-linecap="round" transform="rotate(-90 100 100)" stroke-dasharray="540.35"/></svg>
+    <div class="digits" id="pDigits">25:00</div></div><div id="pDots"></div>
+    <div class="fsctrl"><button class="btn go" id="pGo2" type="button">Start</button><button class="btn dark" id="pSkip2" type="button">Skip</button></div></div>
+    <div class="ctrl"><button class="btn go" id="pGo" type="button">Start</button><button class="btn dark" id="pSkip" type="button">Skip</button><button class="btn ghost" id="pReset" type="button">Reset</button></div>
+    <div class="grid-fields" id="pFields">
+      <label class="field">Focus (minutes)<input type="number" id="pFocus" min="1" max="180"></label>
+      <label class="field">Short break (minutes)<input type="number" id="pShort" min="1" max="60"></label>
+      <label class="field">Long break (minutes)<input type="number" id="pLong" min="1" max="90"></label>
+      <label class="field">Long break after<input type="number" id="pEvery" min="2" max="12"></label>
+      <label class="field">Sound<select id="pSound"></select></label></div>
+    <div class="opts"><label><input type="checkbox" id="pAuto"> Start the next session automatically</label></div>
+    <p class="hint">Keyboard: Space start/pause · S skip · R reset · F full screen.</p></section>
+</main>
+<section class="info"><h2>What is the Pomodoro technique?</h2>
+  <p>It’s a simple way to stay focused: work on one thing for a set time (traditionally 25 minutes), then take a short break. After four sessions, take a longer break. Short, regular breaks help many students concentrate for longer during revision and homework.</p>
+  <h2>More timers</h2><div class="tools"><a class="tool" href="/"><i>⏱️</i><b>Classroom timer</b><span>Big countdown with presets for the board.</span></a><a class="tool" href="/fun-timers/"><i>🐢</i><b>Fun timers</b><span>Animal race, sand timer, traffic light and candle.</span></a><a class="tool" href="/races/"><i>🦆</i><b>Emoji & duck races</b><span>Random-winner races to pick a name or team.</span></a><a class="tool" href="/holiday-countdown/"><i>🎄</i><b>Holiday countdowns</b><span>Days and sleeps until Christmas, Easter and your own dates.</span></a><a class="tool" href="/fundraising-thermometer/"><i>🌡️</i><b>Fundraising thermometer</b><span>Show your total rising – with a cash counter.</span></a><a class="tool" href="/stopwatch/"><i>⏲️</i><b>Stopwatch</b><span>Count up with laps – great for PE and science.</span></a><a class="tool" href="/interval-timer/"><i>💪</i><b>Interval timer</b><span>Work and rest rounds for PE, HIIT and circuits.</span></a><a class="tool" href="/exam-timer/"><i>📝</i><b>Exam timer</b><span>Reading time, extra time and 30/15/5 minute warnings.</span></a><a class="tool" href="/multiple-timers/"><i>🔢</i><b>Multiple timers</b><span>A separate countdown for every group.</span></a><a class="tool" href="/clock/"><i>🕒</i><b>Classroom clock</b><span>Digital, analogue and flip clock for the room.</span></a></div><h2>Questions</h2><details><summary>Can I change the focus and break lengths?</summary><p>Yes – set any focus, short break and long break length, and how many sessions come before a long break. Your settings are remembered on your device.</p></details></section>
+<footer><div class="foot-in">
+  <div class="foot-links"><a href="/">Classroom timer</a> · <a href="/fun-timers/">Fun timers</a> · <a href="/races/">Emoji & duck races</a> · <a href="/holiday-countdown/">Holiday countdowns</a> · <a href="/fundraising-thermometer/">Fundraising thermometer</a> · <a href="/stopwatch/">Stopwatch</a> · <a href="/interval-timer/">Interval timer</a> · <a href="/exam-timer/">Exam timer</a> · <a href="/pomodoro-timer/">Pomodoro timer</a> · <a href="/multiple-timers/">Multiple timers</a> · <a href="/clock/">Classroom clock</a> · <a href="/contact/">Contact</a></div>
+  <div><strong>100% free</strong> – no sign-up, no adverts, nothing to download. Everything runs on your device – apart from the contact form, nothing you type is sent anywhere.</div>
+  <div>© 2026 classroomtimer.co.uk</div>
+</div></footer>
+<script src="/common.js?v=20261110"></script><script src="/pages/pomodoro.js?v=20261110"></script>
+<script data-goatcounter="https://classroomtimer.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

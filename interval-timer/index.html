@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interval Timer – Free HIIT, Tabata &amp; PE Circuit Timer</title>
+<meta name="description" content="Free interval timer for PE, HIIT and circuits: warm-up, work and rest rounds, cool-down, beeps and spoken cues. Tabata and circuit presets. Full screen.">
+<link rel="canonical" href="https://classroomtimer.co.uk/interval-timer/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0F5257">
+<link rel="icon" href="/favicon.svg?v=20261110" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png?v=20261110" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20261110">
+<meta property="og:type" content="website"><meta property="og:url" content="https://classroomtimer.co.uk/interval-timer/"><meta property="og:site_name" content="Classroom Timer">
+<meta property="og:title" content="Interval Timer – Free HIIT, Tabata &amp; PE Circuit Timer"><meta property="og:description" content="Free interval timer for PE, HIIT and circuits: warm-up, work and rest rounds, cool-down, beeps and spoken cues. Tabata and circuit presets. Full screen.">
+<meta property="og:image" content="https://classroomtimer.co.uk/og-image.png?v=20261110"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Interval Timer – Free HIIT, Tabata &amp; PE Circuit Timer"><meta name="twitter:description" content="Free interval timer for PE, HIIT and circuits: warm-up, work and rest rounds, cool-down, beeps and spoken cues. Tabata and circuit presets. Full screen."><meta name="twitter:image" content="https://classroomtimer.co.uk/og-image.png?v=20261110">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site.css?v=20261110">
+<style>.iv .stage{min-height:380px;transition:background .4s}
+  .iv .stage[data-phase=work]{background:#dff6ea}.iv .stage[data-phase=rest]{background:#e2efff}.iv .stage[data-phase=warm]{background:#fff4d6}
+  .iv .stage[data-phase=cool]{background:#efe9ff}.iv .stage[data-phase=done]{background:#ffe9e4}
+  #iPhase{font-size:clamp(1.8rem,6vw,3rem);font-weight:800;margin:0}
+  .iv .stage[data-phase=work] #iPhase{color:#138a5b}.iv .stage[data-phase=rest] #iPhase{color:#2f6fd6}.iv .stage[data-phase=warm] #iPhase{color:#b47a00}.iv .stage[data-phase=cool] #iPhase{color:#6a4fc9}
+  #iDigits{font-size:clamp(4rem,18vw,9rem)}
+  .ibar{width:min(640px,90%);height:16px;border-radius:99px;background:rgba(0,0,0,.08);overflow:hidden}.ibar i{display:block;height:100%;background:currentColor;color:var(--brand2);transform-origin:left}
+  .imeta{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;color:var(--muted);font-weight:600}
+  .stage:fullscreen #iDigits,.stage.fake-fs #iDigits{font-size:clamp(6rem,30vh,22rem)}.stage:fullscreen #iPhase,.stage.fake-fs #iPhase{font-size:clamp(2.5rem,9vh,6rem)}
+  .stage:fullscreen .imeta,.stage.fake-fs .imeta{font-size:1.5rem}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "name": "Interval timer for PE and HIIT", "url": "https://classroomtimer.co.uk/interval-timer/", "applicationCategory": "EducationalApplication", "operatingSystem": "Any (runs in your web browser)", "isAccessibleForFree": true, "inLanguage": "en-GB", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "GBP"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I use it for my own workouts?", "acceptedAnswer": {"@type": "Answer", "text": "Of course – it works just as well for home workouts, running intervals and gym sessions as for PE lessons."}}, {"@type": "Question", "name": "Does it work with the screen locked?", "acceptedAnswer": {"@type": "Answer", "text": "Keep the page open: the timer keeps the screen awake on supported devices. Sounds and spoken cues need the page to be open."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Classroom Timer", "item": "https://classroomtimer.co.uk/"}, {"@type": "ListItem", "position": 2, "name": "Interval timer for PE and HIIT", "item": "https://classroomtimer.co.uk/interval-timer/"}]}]}</script>
+</head>
+<body data-page="interval">
+<header class="top"><div class="top-in">
+  <a class="logo" href="/" aria-label="Classroom Timer – home"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="35" r="24" fill="#FFC845"/><circle cx="32" cy="35" r="18" fill="#fff"/>
+<path d="M32 35 L32 22" stroke="#0F5257" stroke-width="5" stroke-linecap="round"/><path d="M32 35 L41 40" stroke="#FF6B5B" stroke-width="5" stroke-linecap="round"/>
+<rect x="26" y="4" width="12" height="7" rx="3" fill="#FFC845"/><circle cx="32" cy="35" r="3.5" fill="#0F5257"/></svg>Classroom <span>Timer</span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">☰ Menu</button>
+  <nav class="nav" id="nav" aria-label="Timers"><a href="/">Timer</a><a href="/fun-timers/">Fun</a><a href="/races/">Races</a><a href="/holiday-countdown/">Countdowns</a><a href="/stopwatch/">Stopwatch</a><a href="/interval-timer/" class="on" aria-current="page">Interval</a><a href="/exam-timer/">Exam</a><a href="/pomodoro-timer/">Pomodoro</a><a href="/multiple-timers/">Multiple</a><a href="/clock/">Clock</a><a href="/fundraising-thermometer/">Fundraiser</a></nav>
+</div></header>
+<main>
+<div class="hero"><h1>Interval timer for PE and HIIT</h1><p>Set work and rest times, the number of rounds and an optional warm-up and cool-down. Beeps and spoken cues tell everyone when to go and when to rest.</p></div>
+<section class="card iv"><div class="stage" id="stage"><button class="fs-btn" id="fsBtn" type="button"></button><p id="iPhase">Ready</p><div class="digits" id="iDigits">0:00</div>
+    <div class="ibar"><i id="iBar"></i></div><div class="imeta"><span id="iRound"></span><span id="iNext"></span><span id="iTotal"></span></div>
+    <div class="fsctrl"><button class="btn go" id="iGo2" type="button">Start</button><button class="btn dark" id="iSkip2" type="button">Skip</button><button class="btn ghost" id="iReset2" type="button">Reset</button></div></div>
+    <div class="presets" id="iPresets"></div>
+    <div class="grid-fields" id="iFields">
+      <label class="field">Warm-up (seconds)<input type="number" id="iWarm" min="0" max="3600" step="5"></label>
+      <label class="field">Work (seconds)<input type="number" id="iWork" min="0" max="3600" step="5"></label>
+      <label class="field">Rest (seconds)<input type="number" id="iRest" min="0" max="3600" step="5"></label>
+      <label class="field">Rounds<input type="number" id="iRounds" min="1" max="99"></label>
+      <label class="field">Cool-down (seconds)<input type="number" id="iCool" min="0" max="3600" step="5"></label></div>
+    <div class="ctrl"><button class="btn go" id="iGo" type="button">Start</button><button class="btn dark" id="iSkip" type="button">Skip</button><button class="btn ghost" id="iReset" type="button">Reset</button></div>
+    <div class="opts"><label><input type="checkbox" id="iBeeps"> Beeps (3-2-1 and changes)</label><label><input type="checkbox" id="iVoice"> Spoken cues (“Round 2. Go!”)</label></div>
+    <p class="hint">Keyboard: Space start/pause · S skip · R reset · F full screen.</p></section>
+</main>
+<section class="info"><h2>Interval timer presets</h2>
+  <ul><li><strong>Tabata</strong> – 20 seconds hard work, 10 seconds rest, 8 rounds (4 minutes).</li>
+  <li><strong>HIIT 30/30</strong> and <strong>40/20</strong> – classic high-intensity intervals with a warm-up and cool-down.</li>
+  <li><strong>PE circuit</strong> – 45 seconds at each station with 15 seconds to move on.</li>
+  <li><strong>Class stations</strong> – 5 minutes per station with 30 seconds to swap, for carousel activities in any subject.</li></ul>
+  <p>The screen turns green for work, blue for rest, yellow for the warm-up and purple for the cool-down, so everyone can see what to do from across the hall. Three short beeps count down the last seconds of each part.</p>
+  <h2>More timers</h2><div class="tools"><a class="tool" href="/"><i>⏱️</i><b>Classroom timer</b><span>Big countdown with presets for the board.</span></a><a class="tool" href="/fun-timers/"><i>🐢</i><b>Fun timers</b><span>Animal race, sand timer, traffic light and candle.</span></a><a class="tool" href="/races/"><i>🦆</i><b>Emoji & duck races</b><span>Random-winner races to pick a name or team.</span></a><a class="tool" href="/holiday-countdown/"><i>🎄</i><b>Holiday countdowns</b><span>Days and sleeps until Christmas, Easter and your own dates.</span></a><a class="tool" href="/fundraising-thermometer/"><i>🌡️</i><b>Fundraising thermometer</b><span>Show your total rising – with a cash counter.</span></a><a class="tool" href="/stopwatch/"><i>⏲️</i><b>Stopwatch</b><span>Count up with laps – great for PE and science.</span></a><a class="tool" href="/exam-timer/"><i>📝</i><b>Exam timer</b><span>Reading time, extra time and 30/15/5 minute warnings.</span></a><a class="tool" href="/pomodoro-timer/"><i>🍅</i><b>Pomodoro timer</b><span>Focus sessions with planned breaks.</span></a><a class="tool" href="/multiple-timers/"><i>🔢</i><b>Multiple timers</b><span>A separate countdown for every group.</span></a><a class="tool" href="/clock/"><i>🕒</i><b>Classroom clock</b><span>Digital, analogue and flip clock for the room.</span></a></div><h2>Questions</h2><details><summary>Can I use it for my own workouts?</summary><p>Of course – it works just as well for home workouts, running intervals and gym sessions as for PE lessons.</p></details><details><summary>Does it work with the screen locked?</summary><p>Keep the page open: the timer keeps the screen awake on supported devices. Sounds and spoken cues need the page to be open.</p></details></section>
+<footer><div class="foot-in">
+  <div class="foot-links"><a href="/">Classroom timer</a> · <a href="/fun-timers/">Fun timers</a> · <a href="/races/">Emoji & duck races</a> · <a href="/holiday-countdown/">Holiday countdowns</a> · <a href="/fundraising-thermometer/">Fundraising thermometer</a> · <a href="/stopwatch/">Stopwatch</a> · <a href="/interval-timer/">Interval timer</a> · <a href="/exam-timer/">Exam timer</a> · <a href="/pomodoro-timer/">Pomodoro timer</a> · <a href="/multiple-timers/">Multiple timers</a> · <a href="/clock/">Classroom clock</a> · <a href="/contact/">Contact</a></div>
+  <div><strong>100% free</strong> – no sign-up, no adverts, nothing to download. Everything runs on your device – apart from the contact form, nothing you type is sent anywhere.</div>
+  <div>© 2026 classroomtimer.co.uk</div>
+</div></footer>
+<script src="/common.js?v=20261110"></script><script src="/pages/interval.js?v=20261110"></script>
+<script data-goatcounter="https://classroomtimer.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
