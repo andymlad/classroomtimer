@@ -2,3 +2,6 @@
 http://classroomtimer.co.uk/*      https://classroomtimer.co.uk/:splat  301!
 http://www.classroomtimer.co.uk/*  https://classroomtimer.co.uk/:splat  301!
 https://www.classroomtimer.co.uk/* https://classroomtimer.co.uk/:splat  301!
+# Fundraiser moved to the sister site
+/fundraising-thermometer   https://classroom-tools.co.uk/fundraising-thermometer/  301!
+/fundraising-thermometer/*  https://classroom-tools.co.uk/fundraising-thermometer/  301!

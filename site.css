@@ -98,3 +98,5 @@ footer{background:#e7efed;color:var(--muted);font-size:.88rem;padding:26px 20px 
 .foot-links a{color:var(--ink);text-decoration:none;font-weight:600}
 .foot-links a:hover{text-decoration:underline}
 @media print{ .top,footer,.fs-btn{display:none} }
+.nav a.sister{background:rgba(255,200,69,.16);color:var(--sun)}
+.tool.ext::after{content:"↗";float:right;color:var(--muted);font-weight:700}
